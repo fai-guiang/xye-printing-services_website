@@ -39,43 +39,62 @@ body {
     object-fit: contain;
 }
 
+/* COVER PHOTO */
+.cover {
+    margin-top: 60px; /* pushes below topbar */
+    width: 100%;
+    height: 300px;
+    background-image: url("Cover photo.jpg"); /* YOUR COVER PHOTO */
+    background-size: cover;       /* no stretching */
+    background-position: center;  /* keeps center focus */
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+/* LOGO ON COVER (like Facebook profile pic style) */
+.cover-logo {
+    position: absolute;
+    bottom: -40px;
+    left: 30px;
+    background: white;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.cover-logo img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
 /* MAIN LAYOUT */
 .container {
     display: flex;
-    margin-top: 70px;
+    margin-top: 60px;
 }
 
-/* LEFT SIDEBAR */
+/* SIDEBARS + FEED */
 .sidebar-left {
     width: 20%;
     padding: 15px;
-    position: sticky;
-    top: 70px;
-    height: fit-content;
 }
 
-/* CENTER FEED */
 .feed {
     width: 60%;
     padding: 15px;
 }
 
-/* RIGHT SIDEBAR */
 .sidebar-right {
     width: 20%;
     padding: 15px;
-    position: sticky;
-    top: 70px;
-    height: fit-content;
 }
 
-/* CARD STYLE (like posts) */
+/* CARD */
 .card {
     background: white;
     padding: 15px;
     margin-bottom: 15px;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 
 /* RESPONSIVE */
@@ -96,41 +115,43 @@ body {
 <div class="topbar">
     <div class="logo">
         <img src="xye printing logo.jpg" alt="Logo">
-        <strong>Xye Printing Services</strong>
+        <strong>XYE PRITING SERVICES</strong>
     </div>
-    <div>Search / Menu</div>
+    <div>Menu</div>
+</div>
+
+<!-- COVER PHOTO -->
+<div class="cover">
+
+    <!-- LOGO ON COVER -->
+    <div class="cover-logo">
+        <img src="Cover photo.jpg" alt="Logo">
+    </div>
+
 </div>
 
 <!-- MAIN CONTENT -->
 <div class="container">
 
-    <!-- LEFT SIDEBAR -->
+    <!-- LEFT -->
     <div class="sidebar-left">
         <div class="card">Home</div>
         <div class="card">Orders</div>
         <div class="card">Services</div>
-        <div class="card">Contact</div>
     </div>
 
     <!-- FEED -->
     <div class="feed">
-
         <div class="card">
-            <h3>Welcome Post</h3>
-            <p>This is your main feed area (like Facebook posts).</p>
+            <h3>Welcome to Xye Printing Services</h3>
+            <p>Your posts and updates go here.</p>
         </div>
-
-        <div class="card">
-            <h3>Printing Promo</h3>
-            <p>Upload your designs here or announcements.</p>
-        </div>
-
     </div>
 
-    <!-- RIGHT SIDEBAR -->
+    <!-- RIGHT -->
     <div class="sidebar-right">
-        <div class="card">Ads / Promo</div>
-        <div class="card">Updates</div>
+        <div class="card">Promo</div>
+        <div class="card">Announcements</div>
     </div>
 
 </div>
