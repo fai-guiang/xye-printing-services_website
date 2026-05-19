@@ -3,152 +3,238 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Xye Printing Services</title>
+<title>My Printing Shop</title>
 
 <style>
 body {
   margin: 0;
   font-family: Arial, sans-serif;
-  background: #f7f7fb;
-  color: #222;
+  background: #f5f6f8;
 }
 
-<header>
-  <img src="xye printing logo.jpg" alt="Logo" style="width:120px; border-radius:50%; display:block; margin:auto;">
-  <h1>XYE Printing Services</h1>
-  <p>Custom Stickers • Labels • Printing</p>
-</header
-  
+/* TOP BAR */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background: white;
+  border-bottom: 1px solid #ddd;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+  color: #2a7de1;
+}
+
+.search {
+  flex: 1;
+  margin: 0 20px;
+  display: flex;
+}
+
+.search input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+}
+
+.search button {
+  padding: 8px 12px;
+  background: #2a7de1;
+  color: white;
+  border: none;
+}
+
+/* NAV */
+.nav {
+  display: flex;
+  gap: 15px;
+  padding: 10px 20px;
+  background: #fff;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+}
+
+/* MAIN LAYOUT */
+.container {
+  display: flex;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 220px;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.sidebar h3 {
+  margin-top: 0;
+  font-size: 16px;
+}
+
+.sidebar a {
+  display: block;
+  padding: 6px 0;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* MAIN CONTENT */
+.main {
+  flex: 1;
+}
 
 /* HERO */
 .hero {
-  background: linear-gradient(120deg, #ffd6e0, #d6e6ff);
-  text-align: center;
-  padding: 80px 20px;
+  background: linear-gradient(120deg, #a8d0ff, #ffd6e0);
+  padding: 40px;
+  border-radius: 10px;
+  color: #000;
 }
 
 .hero h1 {
-  font-size: 42px;
   margin: 0;
 }
 
-.hero p {
+/* PRODUCT GRID */
+.section-title {
+  margin: 20px 0 10px;
   font-size: 18px;
-  margin-top: 10px;
 }
 
-.btn {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 22px;
-  background: black;
-  color: white;
-  border-radius: 30px;
-  text-decoration: none;
-}
-
-/* SECTIONS */
-section {
-  padding: 50px 20px;
-  max-width: 1100px;
-  margin: auto;
-}
-
-h2 {
-  text-align: center;
-}
-
-/* GRID */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
 }
 
 .card {
   background: white;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  padding: 10px;
+  border-radius: 10px;
   text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-/* GALLERY */
-.gallery img {
+.card img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 8px;
+}
+
+.small {
+  font-size: 13px;
+  color: #555;
 }
 
 /* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
-  background: #eee;
+  margin-top: 30px;
+  background: #fff;
 }
 </style>
 </head>
 
 <body>
 
-<div class="hero">
-  <h1>Custom Printing Services</h1>
-  <p>Stickers • Labels • Souvenirs and Giveaways • Invitations</p>
-  <a class="btn" href="#contact">Order Now</a>
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="logo">UPrinting Style</div>
+
+  <div class="search">
+    <input type="text" placeholder="Search printing services...">
+    <button>Search</button>
+  </div>
+
+  <div>Cart | Account</div>
 </div>
 
-<section>
-  <h2>Our Services</h2>
-  <div class="grid">
-    <div class="card">🎨 Custom Stickers</div>
-    <div class="card">🏷️ Name Labels</div>
-    <div class="card">📚 Souvenirs and Giveaways</div>
-    <div class="card">🖨️ Invitations</div>
-  </div>
-</section>
+<!-- NAV -->
+<div class="nav">
+  <div>Stickers</div>
+  <div>Labels</div>
+  <div>Posters</div>
+  <div>Banners</div>
+  <div>Business Cards</div>
+</div>
 
-<section>
-  <h2>Sample Works</h2>
-  <div class="grid gallery">
-    <div class="card">Upload Image</div>
-    <div class="card">Upload Image</div>
-    <div class="card">Upload Image</div>
-  </div>
-</section>
+<!-- CONTENT -->
+<div class="container">
 
-<section>
-  <h2>Pricing</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Basic Stickers</h3>
-      <p>Affordable custom labels</p>
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+    <h3>Categories</h3>
+    <a href="#">Custom Stickers</a>
+    <a href="#">Labels</a>
+    <a href="#">Packaging</a>
+    <a href="#">Flyers</a>
+    <a href="#">Business Cards</a>
+    <a href="#">Banners</a>
+  </div>
+
+  <!-- MAIN -->
+  <div class="main">
+
+    <!-- HERO -->
+    <div class="hero">
+      <h1>Make Your Brand Stand Out</h1>
+      <p>Custom printing for stickers, labels, and business needs</p>
     </div>
-    <div class="card">
-      <h3>Premium Prints</h3>
-      <p>High-quality glossy finish</p>
-    </div>
-    <div class="card">
-      <h3>Bulk Orders</h3>
-      <p>Discount for large orders</p>
-    </div>
-  </div>
-</section>
 
-<section id="contact">
-  <h2>Contact Us</h2>
-  <div class="card">
-    <p>Message us to place your order</p>
+    <!-- TOP SELLERS -->
+    <div class="section-title">Top Services</div>
 
-    <a class="btn" href="https://www.facebook.com/profile.php?id=61552058430928" target="_blank">Facebook</a>
-    <a class="btn" href="https://m.me/yourpage" target="_blank">Messenger</a>
+    <div class="grid">
+      <div class="card">
+        <div style="height:120px;background:#ddd;border-radius:8px;"></div>
+        <p>Yard Signs</p>
+        <p class="small">Custom printing</p>
+      </div>
+
+      <div class="card">
+        <div style="height:120px;background:#ddd;border-radius:8px;"></div>
+        <p>Stickers</p>
+        <p class="small">Waterproof labels</p>
+      </div>
+
+      <div class="card">
+        <div style="height:120px;background:#ddd;border-radius:8px;"></div>
+        <p>Flyers</p>
+        <p class="small">Business marketing</p>
+      </div>
+
+      <div class="card">
+        <div style="height:120px;background:#ddd;border-radius:8px;"></div>
+        <p>Banners</p>
+        <p class="small">Large format print</p>
+      </div>
+    </div>
+
+    <!-- FEATURED -->
+    <div class="section-title">Featured Products</div>
+
+    <div class="grid">
+      <div class="card"><div style="height:120px;background:#ccc;border-radius:8px;"></div><p>Sticker Packs</p></div>
+      <div class="card"><div style="height:120px;background:#ccc;border-radius:8px;"></div><p>Business Cards</p></div>
+      <div class="card"><div style="height:120px;background:#ccc;border-radius:8px;"></div><p>Labels</p></div>
+      <div class="card"><div style="height:120px;background:#ccc;border-radius:8px;"></div><p>Posters</p></div>
+    </div>
+
   </div>
-</section>
+</div>
 
 <footer>
-  © 2023 Custom Printing Services
+  © 2026 My Printing Services
 </footer>
 
 </body>
 </html>
-
-
-
